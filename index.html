@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="YouTube Karaoke Queue System - Host karaoke sessions with YouTube videos" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="YouTube Karaoke Queue" />
+    <meta property="og:description" content="Host karaoke sessions with YouTube videos" />
+    <meta property="og:site_name" content="YouTube Karaoke Queue" />
+    
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="YT Karaoke" />
+    
+    <!-- Preconnect to external services -->
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://img.youtube.com" />
+    
+    <title>YouTube Karaoke Queue</title>
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Prevent auto-zooming on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- YouTube IFrame API -->
+    <script async defer src="https://www.youtube.com/iframe_api"></script>
+    
+    <!-- Error tracking -->
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        console.error('Global error:', { msg, url, line, col, error });
+        // You can add error reporting service here
+        return false;
+      };
+      
+      window.onunhandledrejection = function(event) {
+        console.error('Unhandled promise rejection:', event.reason);
+        // You can add error reporting service here
+      };
+    </script>
+  </body>
+</html>

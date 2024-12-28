@@ -1,0 +1,42 @@
+{
+  "name": "YouTube Karaoke Queue",
+  "short_name": "YT Karaoke",
+  "description": "Host karaoke sessions with YouTube videos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Create Session",
+      "url": "/",
+      "description": "Create a new karaoke session"
+    }
+  ],
+  "categories": ["entertainment", "music", "social"],
+  "screenshots": [],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "features": [
+    "Cross Platform",
+    "Real-time Updates",
+    "YouTube Integration",
+    "Mobile Friendly"
+  ],
+  "dir": "ltr",
+  "lang": "en",
+  "scope": "/",
+  "serviceworker": {
+    "src": "/sw.js",
+    "scope": "/"
+  }
+}
